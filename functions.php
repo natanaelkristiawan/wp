@@ -110,7 +110,7 @@ function team_field_render() {
 add_action( 'add_meta_boxes', 'team_field_render' );
 
 function team_field_callback( $post ) {
-    include plugin_dir_path( __FILE__ ) . './form/team.php';
+  include plugin_dir_path( __FILE__ ) . './form/team.php';
 }
 
 add_action('save_post_team', function ($post_id) {
@@ -133,7 +133,6 @@ add_action('save_post_team', function ($post_id) {
 
 
     // var_dump($_POST['value']);
-
     foreach ($_POST['value'] as $key => $value) {
         if ( empty($value['jabatan'])) {
             continue;
@@ -152,6 +151,36 @@ add_action('save_post_team', function ($post_id) {
 });
 
 // end teams
+
+
+// general settings
+
+// create custom plugin settings menu
+add_action('admin_menu', 'my_cool_plugin_create_menu');
+
+function my_cool_plugin_create_menu() {
+
+
+
+
+  //create new top-level menu
+  add_menu_page('General Setting', 'General', 'administrator', __FILE__, 'my_cool_plugin_settings_page' , '', 9 );
+
+  //call register settings function
+  add_action( 'admin_init', 'register_my_cool_plugin_settings' );
+}
+
+
+function register_my_cool_plugin_settings() {
+  //register our settings
+  register_setting( 'general-settings-group', 'blogname' );
+  register_setting( 'general-settings-group', 'some_other_option' );
+  register_setting( 'general-settings-group', 'option_etc' );
+}
+
+function my_cool_plugin_settings_page() {
+  include plugin_dir_path( __FILE__ ) . './form/general.php';
+}
 
 
 
