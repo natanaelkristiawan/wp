@@ -1,11 +1,6 @@
 <?php wp_enqueue_script("jquery"); wp_enqueue_media();?>
 
 <div class="form-group">
-    <label>Detail</label>
-    <input class="form-input"  id="description" value="<?=get_post_meta( $post->ID, 'description', true )?>" type="text" name="description">
-</div>
-
-<div class="form-group">
     <label for="image_url">Image:</label><br/>
     <img src="<?=get_post_meta( $post->ID, 'image_project', true )?>" id="image_project" style="max-width: 300px">
     <input type="hidden" name="image_project" id="image_url" class="regular-text" value="<?=get_post_meta( $post->ID, 'image_project', true )?>"><br/>

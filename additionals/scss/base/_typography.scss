@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -6,11 +6,11 @@ body{
     color: $default-text;
 }
 
-.heading-primary{
+.heading-primary {
     text-transform: uppercase;
     color: $red;
 
-    &--1{
+    &--1 {
         display: block;
         font-size: 45px;
         font-weight: 900;
@@ -19,11 +19,19 @@ body{
         animation: moveInLeft 1s ease-out;
         animation-delay: 4s;
 
+        @include respond(tab-port) {
+            text-align: center;
+        }
+
         @include respond(mobile) {
-            font-size: 50px;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-align: center;
         }
     }
-    &--2{
+
+    &--2 {
         display: block;
         font-size: 45px;
         font-weight: 300;
@@ -33,10 +41,13 @@ body{
         animation-delay: 4s;
 
         @include respond(mobile) {
-            font-size: 50px;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 4px;
         }
     }
-    &--3{
+
+    &--3 {
         display: block;
         font-size: 30px;
         font-weight: 700;
@@ -45,60 +56,81 @@ body{
         animation-delay: 4s;
 
         @include respond(mobile) {
-            font-size: 50px;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 6px;
         }
     }
 }
 
-.heading-secondary{
+.heading-secondary {
     text-transform: uppercase;
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: .2rem;
     display: inline-block;
-    background-image: linear-gradient(to right,$redDark, $redLight);
+    background-image: linear-gradient(to right, $redDark, $redLight);
     background-clip: text;
     color: transparent;
     transition: all .2s;
 
-    &:hover{
+    &:hover {
         transform: scale(1.2);
         text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
         backface-visibility: hidden;
     }
 }
 
-.heading-tertiary{
+.heading-tertiary {
     font-size: 2.5rem;
     font-weight: 700;
 }
-.paragraph{
-    color: $color-gray;
-    font-size: $default-font;
 
-    &:not(:last-child){
+.paragraph {
+    color: $color-gray;
+    font-size: 2rem;
+
+    &:not(:last-child) {
         margin-bottom: 3rem;
     }
-}
-.judul{
-    text-transform: uppercase;
-    letter-spacing: 2px;
 
-    &__break{
-        width: 310px;
-        word-wrap: break-word;
-
+    &--history {
         @include respond(tab-port) {
-            width: 255px;
-        }        
+            max-height: 10rem;
+            overflow-y: scroll;
 
-        @include respond(mobile) {
-            width: 140px;
+            &::-webkit-scrollbar {
+                width: 1rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: .5rem;
+            }
         }
     }
 }
 
-.heading-line{
+.judul {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &__main {
+        text-transform: none;
+        letter-spacing: 2px;
+        color: $red;
+        text-align: center;
+    }
+
+    &__sub {
+        text-transform: none;
+        letter-spacing: 2px;
+        color: $default-text;
+        text-align: left;
+    }
+}
+
+.heading-line {
     width: 20rem;
     height: 1px;
     margin-top: 1rem;
@@ -108,34 +140,34 @@ body{
     background-color: $red;
 }
 
-.popup-judul{
+.popup-judul {
     color: $red;
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: .1rem;
 
-    &__sub{
+    &__sub {
         letter-spacing: .1rem;
         font-size: 1.8rem;
         color: $default-text;
     }
 
-    &__sub-judul{
+    &__sub-judul {
         text-transform: uppercase;
         font-size: 2.5rem;
         letter-spacing: .3rem;
     }
 
     @include respond(tab-port) {
-        font-size: .9rem;
+        font-size: 2.9rem;
     }
 
     @include respond(mobile) {
-        font-size: 0.8rem;
+        font-size: 2.5rem;
     }
 }
 
-.list-jabatan{
+.list-jabatan {
     margin-left: 4rem;
     font-size: 2.5rem;
     color: $red;

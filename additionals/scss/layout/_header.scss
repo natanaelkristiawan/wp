@@ -1,27 +1,48 @@
-.header{
+.header {
     height: 100vh;
     position: relative;
 
-    &__text-box{
+    &__button {
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        transform: translateY(-50%);
+
+        @include respond(tab-port) {
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include respond(mobile) {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__text-box {
         position: absolute;
         top: 60%;
         left: 40px;
         transform: translateY(-50%);
-        
+
         @include respond(tab-port) {
-            top: 60%;
+            top: 50%;
+            left: 25%;
+            transform: translate(-15%, -35%);
         }
-        
+
         @include respond(mobile) {
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
             z-index: -1;
         }
 
     }
 
-    &__img-1{
+    &__img-1 {
         height: 400px;
         position: absolute;
         top: 50%;
@@ -38,13 +59,13 @@
         }
     }
 
-    &__logo-box{
+    &__logo-box {
         position: absolute;
         top: 5%;
         left: 40px;
     }
 
-    &__logo{
+    &__logo {
         height: 12rem;
     }
 

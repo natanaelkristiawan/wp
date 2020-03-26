@@ -6,17 +6,17 @@
 @import "base/utilities";
 @import "base/animation";
 
-@import "layout/grid";
 @import "layout/kotak";
 @import "layout/header";
 @import "layout/service";
 @import "layout/team";
 @import "layout/footer";
 @import "layout/navigation";
+@import "layout/visi";
 
 @import "component/button";
 @import "component/gambar";
-@import "component/swiper";
+@import "component/project";
 @import "component/card";
 @import "component/form";
 @import "component/loader";
