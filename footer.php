@@ -65,17 +65,17 @@
                         <ul class="footer__list footer__list--2">
                             <li class="footer__item footer__item--2">
                                 <label for="paragraph">
-                                    <a href="#"><i class="fab fa-facebook-f"><?=esc_attr( get_option('facebook') )?></i></a>
+                                    <a href="<?=esc_attr( get_option('facebook') )?>"><i class="fab fa-facebook-f"></i></a>
                                 </label>
                             </li>
                             <li class="footer__item footer__item--2">
                                 <label for="paragraph">
-                                    <a href="#"><i class="fab fa-twitter"><?=esc_attr( get_option('twitter') )?></i></a>
+                                    <a href="<?=esc_attr( get_option('twitter') )?>"><i class="fab fa-twitter"></i></a>
                                 </label>
                             </li>
                             <li class="footer__item footer__item--2">
                                 <label for="paragraph">
-                                    <a href="#"><i class="fab fa-instagram"><?=esc_attr( get_option('instagram') )?></i></a>
+                                    <a href="<?=esc_attr( get_option('instagram') )?>"><i class="fab fa-instagram"></i></a>
                                 </label>
                             </li>
                         </ul>

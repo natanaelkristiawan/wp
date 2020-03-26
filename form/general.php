@@ -21,7 +21,7 @@
   <input type="radio" name="tabset" id="tab6" aria-controls="projects">
   <label for="tab6">Team</label>
 
-  <input type="radio" name="tabset" id="tab7" aria-controls="social">
+  <input type="radio" name="tabset" id="tab7" aria-controls="mediaSocial">
   <label for="tab7">Media Social</label>
 
   <?php submit_button(); ?>
@@ -159,7 +159,7 @@
       </div>
     </section>
 
-    <section id="media" class="tab-panel">
+    <section id="mediaSocial" class="tab-panel">
       <h2>Media Social</h2>
       <div class="form-group">
         <label for="phone">Phone</label>
@@ -190,9 +190,6 @@
         <label for="twitter">Twitter</label>
         <input type="text" id="twitter" name="twitter" value="<?php echo esc_attr( get_option('twitter') ); ?>" class="form-input">
       </div>
-
-
-
     </section>
   </div>
   
@@ -270,7 +267,8 @@
 .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
 .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
 .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6),
+.tabset > input:nth-child(13):checked ~ .tab-panels > .tab-panel:nth-child(7) {
   display: block;
 }
 

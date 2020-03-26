@@ -19,7 +19,7 @@
                 <div class="swiper-wrapper">
                    <?php 
                     $query = new WP_Query(array(
-                        'post_type' => 'vision',
+                        'post_type' => 'service',
                         'post_status' => 'publish',
                         'numberposts' => -1
                     )); 

@@ -29,7 +29,7 @@
       <div class="swiper-slide">
             <div class="visi">
                 <h3 class="judul__main u-margin-bottom-small"><?=esc_attr($query->post->post_title)?></h3>
-                <p class="judul__sub">D<?=esc_attr($query->post->post_content)?></p>
+                <p class="judul__sub"><?=esc_attr($query->post->post_content)?></p>
             </div>
         </div>
 
