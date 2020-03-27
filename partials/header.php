@@ -50,7 +50,6 @@
     </div>
     <div class="header__img-box">
         <img src="<?=get_template_directory_uri()?>/additionals/img/banner.png" alt="" class="header__img-1">
-        <div class="kotak">&nbsp;</div>
     </div>
 </header>
 <!-- --- akhir-header --- -->

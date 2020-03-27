@@ -68,7 +68,7 @@ body {
   letter-spacing: 3px;
   margin-bottom: 20px;
   animation: moveInLeft 1s ease-out;
-  animation-delay: 4s;
+  animation-delay: 1.8s;
 }
 @media only screen and (max-width: 56.25em) {
   .heading-primary--1 {
@@ -90,7 +90,7 @@ body {
   letter-spacing: 10px;
   margin-bottom: 20px;
   animation: moveInRight 1s ease-out;
-  animation-delay: 4s;
+  animation-delay: 1.8s;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--2 {
@@ -105,7 +105,7 @@ body {
   font-weight: 700;
   letter-spacing: 3.8px;
   animation: moveInLeft 1s ease-out;
-  animation-delay: 4s;
+  animation-delay: 1.8s;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary--3 {
@@ -169,6 +169,11 @@ body {
   letter-spacing: 2px;
   color: #B9000C;
   text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .judul__main {
+    font-size: 2rem;
+  }
 }
 .judul__sub {
   text-transform: none;
@@ -418,7 +423,8 @@ body {
 .header__logo-box {
   position: absolute;
   top: 5%;
-  left: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .header__logo {
   height: 12rem;
@@ -455,6 +461,12 @@ body {
   .team__slider--photo {
     height: 60rem;
   }
+}
+.team__box {
+  display: inline-block;
+}
+.team__box:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .footer {
@@ -731,7 +743,7 @@ ul li.active a {
 .btn--animated {
   animation: moveInBottom 1s ease-out 0.75s;
   animation-fill-mode: backwards;
-  animation-delay: 4s;
+  animation-delay: 1.8s;
 }
 
 .btn-text:link, .btn-text:visited {

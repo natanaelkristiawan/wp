@@ -9,43 +9,41 @@
             </p>
 
             <div class="team__slider">
-                <div id="teamSwiper" class="swiper-container">
-                    <div class="swiper-wrapper" style="margin: 5rem auto;">
-                        <?php 
-                            $query = new WP_Query(array(
-                                'post_type' => 'team',
-                                'post_status' => 'publish',
-                                'numberposts' => -1
-                            )); 
+                <div class="row">
+               <?php 
+                    $query = new WP_Query(array(
+                        'post_type' => 'team',
+                        'post_status' => 'publish',
+                        'numberposts' => -1
+                    )); 
 
-                            while ($query->have_posts()) {
-                                $query->the_post();
+                    while ($query->have_posts()) {
+                        $query->the_post();
 
-                            ?>
+                    ?>
 
-                             <div class="swiper-slide">
-                                <div class="kartu">
-                                    <div class="kartu__side kartu__side--front">
-                                        <div class="kartu__picture">
-                                            <img src="<?=get_post_meta(get_the_ID(), 'image_team', true )?>" alt="Team 1" class="team__slider--photo">
-                                        </div>
-                                    </div>
-                                    <div class="kartu__side kartu__side--back">
-                                        <div class="kartu__cta">
-                                            <div class="kartu__price-box">
-                                                <p class="kartu__price-only"><?=esc_attr($query->post->post_title)?></p>
-                                                <p class="kartu__price-value"><?=get_post_meta( get_the_ID(), 'name', true )?></p>
-                                            </div>
-                                            <a href="#popup" data-title = "<?=esc_attr($query->post->post_title)?>" data-dob="<?= date('d F Y', strtotime(get_post_meta(get_the_ID(), 'dob', true )))  ?>" data-image="<?=get_post_meta(get_the_ID(), 'image_team', true )?>" data-name="<?=get_post_meta( get_the_ID(), 'name', true )?>" data-riwayat='<?= json_encode( unserialize(get_post_meta( get_the_ID(), 'value', true )))  ?>' data-title="<?=esc_attr($query->post->post_title)?>"  class="btn btn--red btn-popup">View More</a>
-                                        </div>
-                                    </div>
+                    <div class="col-lg-4 team__box">
+                        <div class="kartu">
+                            <div class="kartu__side kartu__side--front">
+                                <div class="kartu__picture">
+                                    <img src="<?=get_post_meta(get_the_ID(), 'image_team', true )?>" alt="Team 1" class="team__slider--photo">
                                 </div>
                             </div>
-
-                            <?php } ?>
+                            <div class="kartu__side kartu__side--back">
+                                <div class="kartu__cta">
+                                    <div class="kartu__price-box">
+                                        <p class="kartu__price-only"><?=esc_attr($query->post->post_title)?></p>
+                                        <p class="kartu__price-value"><?=get_post_meta( get_the_ID(), 'name', true )?></p>
+                                    </div>
+                                    <a href="#popup" data-title = "<?=esc_attr($query->post->post_title)?>" data-dob="<?= date('d F Y', strtotime(get_post_meta(get_the_ID(), 'dob', true )))  ?>" data-image="<?=get_post_meta(get_the_ID(), 'image_team', true )?>" data-name="<?=get_post_meta( get_the_ID(), 'name', true )?>" data-riwayat='<?= json_encode( unserialize(get_post_meta( get_the_ID(), 'value', true )))  ?>' data-title="<?=esc_attr($query->post->post_title)?>"  class="btn btn--red btn-popup">View More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                     <div class="swiper-pagination"></div>
+                     <?php } ?>
                 </div>
+
+
             </div>
         </div>
     </section>

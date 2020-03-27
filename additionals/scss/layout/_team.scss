@@ -14,4 +14,12 @@
 
     }
 
+    &__box {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
 }

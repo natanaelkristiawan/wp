@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -87,7 +87,6 @@
         </div>
         <div class="header__img-box">
             <img src="img/banner.png" alt="" class="header__img-1">
-            <div class="kotak">&nbsp;</div>
         </div>
     </header>
     <!-- --- akhir-header --- -->
@@ -272,11 +271,12 @@
                         </li>
                         <li class="footer__item footer__item--1">
                             <label for="paragraph"><i class="fas fa-phone"></i></label>
-                            <p class="paragraph footer__item--p">+62 123 4567 8901</p>
+                            <p class="paragraph footer__item--p">(021) 3907889</p>
                         </li>
                         <li class="footer__item footer__item--1">
                             <label for="paragraph"><i class="fas fa-map-marker-alt"></i></label>
-                            <p class="paragraph footer__item--p">Jl. Nangka Buana No. 01, Jakarta Pusat</p>
+                            <p class="paragraph footer__item--p">Jl. KH. Wahid Hasyim No.159, RT.1/RW.5, Kb. Kacang,
+                                Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10240</p>
                         </li>
                         <li class="footer__item footer__item--1 u-margin-bottom-small">
                             <label for="paragraph"><i class="fas fa-envelope"></i></label>
@@ -343,7 +343,7 @@
         </div>
     </div>
     <!-- --- Akhir Popup About --- -->
-    <!-- tester -->
+
     <!-- --- Awal Popup Team 1--- -->
     <div class="popup" id="popupTeam1">
         <div class="popup__content">
@@ -610,8 +610,8 @@
     </div>
     <!-- --- Akhir Popup Team 6--- -->
 
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="font-awesome/js/all.min.js"></script>
     <script src="swiper/js/swiper.min.js"></script>
     <script src="js/script.js"></script>
